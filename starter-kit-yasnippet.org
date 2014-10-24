@@ -18,11 +18,11 @@ inspired by TextMate's templating syntax.
 
   ;; If `yasnippet-bundle' has previously been installed through ELPA,
   ;; delete it before installing the new `yasnippet'
-  (let ((yas-bundle-desc (assq 'yasnippet-bundle package-alist)))
-    (when yas-bundle-desc
-      (package-delete "yasnippet-bundle"
-                      (package-version-join
-                       (package-desc-vers (cdr yas-bundle-desc))))))
+  ;; (let ((yas-bundle-desc (assq 'yasnippet-bundle package-alist)))
+  ;;  (when yas-bundle-desc
+  ;;    (package-delete "yasnippet-bundle"
+  ;;                    (package-version-join
+  ;;                     (package-desc-version (cdr yas-bundle-desc))))))
 #+end_src
 
 ** Put yasnippet directories on the load path
