@@ -284,10 +284,11 @@ interested in the actual code implementing the starter kit.
 - ELPA archive repositories and two packages to install by default.
   #+begin_src emacs-lisp
         (setq package-archives
-              '(("gnu"         . "http://elpa.gnu.org/packages/")
-                ("org"         . "http://orgmode.org/elpa/")
-                ("melpa"       . "http://melpa.milkbox.net/packages/")
-                ("marmalade"   . "http://marmalade-repo.org/packages/")))
+              '(("gnu"          . "http://elpa.gnu.org/packages/")
+                ("org"          . "http://orgmode.org/elpa/")
+                ("melpa"        . "http://melpa.org/packages/")
+                ("melpa-stable" . "http://stable.melpa.org/packages/")))
+               ;;("marmalade"   . "http://marmalade-repo.org/packages/")))
         (package-initialize)
         
         (defvar starter-kit-packages nil
