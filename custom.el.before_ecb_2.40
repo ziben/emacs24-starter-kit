@@ -1,0 +1,84 @@
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Yahei Mono" :foundry "outline" :slant normal :weight normal :height 120 :width normal))))
+ '(fixed-pitch ((t (:family "Yahei Mono"))))
+ '(variable-pitch ((t (:family "Yahei Mono")))))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
+ '(custom-enabled-themes (quote (monokai)))
+ '(custom-safe-themes
+   (quote
+    ("0d1da846067f9bdcacab5d9dd3ed4d8243809b1d0b34a0eaa73cee9a033bcfa7" default)))
+ '(display-time-24hr-format t)
+ '(display-time-day-and-date t)
+ '(display-time-mode t)
+ '(global-linum-mode t)
+ '(monokai-height-plus-1 1.05)
+ '(monokai-height-plus-2 1.1)
+ '(monokai-height-plus-3 1.15)
+ '(monokai-height-plus-4 1.2)
+ '(org-startup-indented t)
+ '(server-mode t)
+ '(show-paren-mode t)
+ '(size-indication-mode t)
+ '(tabbar-mode t nil (tabbar))
+ '(tool-bar-mode nil)
+ '(window-number-mode t))
+
+(set-file-name-coding-system (quote gb18030))
+
+;;; Smex
+(autoload 'smex "smex"
+  "Smex is a M-x enhancement for Emacs, it provides a convenient interface to
+your recently and most frequently used commands.")
+
+(global-set-key (kbd "M-x") 'smex)
+
+(setq *win32* (eq system-type 'windows-nt) )
+;; win32 auto configuration, assuming that cygwin is installed at "e:/cygwin"
+(if *win32*
+(progn
+    (setq cygwin-mount-cygwin-bin-directory "E:/cygwin/bin")
+    (setq cygwin-root-directory "E:/cygwin/")
+    (require 'setup-cygwin)
+    ))
+
+(require 'window-number)
+
+(starter-kit-load "yasnippet")
+(starter-kit-load "org")
+(starter-kit-load "js")
+(starter-kit-load "python")
+(starter-kit-load "scala")
+
+(require 'ox-publish)
+(setq org-publish-project-alist
+      '(
+        ("org-notes"
+         :base-directory "D:/Seafile/personal/org/"
+         :base-extension "org"
+         :publishing-directory "D:/Seafile/personal/html"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4             ; Just the default for this project.
+		 :auto-sitemap t                ; Generate sitemap.org automagically
+         :auto-preamble t
+         )
+        ("org-static"
+         :base-directory "D:/Seafile/personal/org/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "D:/Seafile/personal/html"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("org" :components ("org-notes" "org-static"))
+        ))

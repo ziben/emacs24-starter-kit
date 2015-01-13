@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/purcell-emacs.d/" "d:/ziben/emacs/emacs.d/purcell-emacs.d/")

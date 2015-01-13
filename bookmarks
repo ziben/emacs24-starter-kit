@@ -1,0 +1,35 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(#1=(#("org" 0 3
+      (bmkp-full-record #1#))
+    (buffer-name . "org")
+    (front-context-string . "d:/Seafile/我的资料库")
+    (rear-context-string . "801 10-23 16:39 ")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(21576 48858 49000 0))
+    (created . #2#)
+    (position . 67)
+    (filename . "d:/Seafile/我的资料库/org/")
+    (dired-directory "d:/Seafile/我的资料库/org/org" "d:/Seafile/我的资料库/org/Emacs笔记.org")
+    (dired-marked)
+    (dired-switches . "-al")
+    (dired-subdirs)
+    (dired-hidden-dirs)
+    (handler . bmkp-jump-dired))
+#1=(#("Emacs笔记.org" 0 11
+      (bmkp-full-record #1#))
+    (filename . "d:/Seafile/我的资料库/org/Emacs笔记.org")
+    (buffer-name . "Emacs笔记.org")
+    (front-context-string . "\n6. C-x r l 书签列表")
+    (rear-context-string . "，给目录化的buffer一个名字")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(21576 48738 485000 0))
+    (created . #2#)
+    (position . 932))
+)

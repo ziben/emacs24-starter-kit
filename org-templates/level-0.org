@@ -1,0 +1,8 @@
+#+AUTHOR: zimt
+#+EMAIL: zimt AT qq DOT com
+#+LINK_HOME: index.html
+#+HTML_LINK_UP: index.html
+#+LANGUAGE: zh
+;#+INFOJS_OPT: path:js/org-info.js
+;#+HTML_HEAD: <link href="css/org-manual.css" rel="stylesheet" type="text/css" />
+;#+OPTIONS: html-style:nil
